@@ -9,7 +9,7 @@ use App\Http\Controllers\FormsController;
 //     return view('welcome');
 // });
 
-Route::get('/test', function () {
+Route::get('/', function () {
 
     return view('welcome');
 });
@@ -18,6 +18,10 @@ Route::get('/test', function () {
 Route::get('/home',function(){
 
     return view('home');
+});
+Route::get('/about',function(){
+
+    return view('about');
 });
 
 
@@ -36,3 +40,6 @@ Route::get('/form',function(){
 
 
 Route::post("/submit",[FormsController::class,"formSubmit"]);
+
+
+Route::view('/contact','contact');

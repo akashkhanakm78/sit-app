@@ -7,4 +7,11 @@
 
 <div class="text-red-500 font-bold">Hi this is home.</div>
 
+<div class="flex gap-5">
+
+
+    
+  
+</div>
+
 @endsection

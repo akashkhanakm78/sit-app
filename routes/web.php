@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestConroller;
 use App\Http\Controllers\ArryController;    
 use App\Http\Controllers\FormsController;    
+use App\Http\Controllers\StrudenController;    
+
+
 // Route::get('/', function () {
 
 //     return view('welcome');
@@ -43,3 +46,10 @@ Route::post("/submit",[FormsController::class,"formSubmit"]);
 
 
 Route::view('/contact','contact');
+
+
+Route::post('/create-studen', [StrudenController::class, 'createStudent']);
+
+Route::get('/get-studen', [StrudenController::class, 'getStudents']);
+
+Route::view('/student-form',"createstudent");

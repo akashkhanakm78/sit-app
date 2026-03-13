@@ -10,16 +10,15 @@ class UploadController extends Controller
     public function upload(Request $req){
 
             // $req->validate([
-            //         'image' => 'required||max:2048'
+            //         'image' => 'required|max:2048'
             //         ]);
 
-                    
+                
+            $path = $req->file('image')->store('images', 'public');
 
-            // $path = $req->file('image')->store('images', 'public');
+            $url = asset('storage/' . $path);      
 
-            // $url = asset('storage/' . $path);
-
-    return response()->json(['url' => $req->file('image')]);
+    return view('showimage')->with('url', $url );
 
 
     }
